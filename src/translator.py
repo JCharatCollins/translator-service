@@ -1,4 +1,3 @@
-import bigframes.dataframe
 from vertexai.preview.language_models import ChatModel, InputOutputTextPair
 
 def get_translation(post: str) -> str:
