@@ -72,6 +72,5 @@ def query_llm_robust(post: str) -> "tuple[bool, str]":
         return (False, translation)
       return (False, "I'm sorry, we were unable to translate this post.")
 
-
 def translate_content(content: str) -> "tuple[bool, str]":
    return query_llm_robust(content)
