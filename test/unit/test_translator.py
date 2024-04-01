@@ -202,9 +202,6 @@ def eval_single_response_complete(expected_answer: "tuple[bool, str]", llm_respo
 
 #   return sum(eval_results)/len(eval_results)
 
-def test_individual(test, mocker):
-  mocker.return_value = test["expected_answer"]
-
 def test_all():
   for test in complete_eval_set:
     @patch('src.translator.translate_content')
