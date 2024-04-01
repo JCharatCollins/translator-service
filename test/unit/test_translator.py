@@ -205,7 +205,7 @@ def eval_single_response_complete(expected_answer: "tuple[bool, str]", llm_respo
 def test_individual(test):
   assert eval_single_response_complete(test["expected_answer"], translate_content(test["post"])) >= 0.8
 
-@patch('translate_content')
+@patch('src.translator.translate_content')
 def test_all(mocker):
   for test in complete_eval_set:
     mocker.return_value = test["expected_answer"]
