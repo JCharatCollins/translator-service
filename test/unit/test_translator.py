@@ -209,4 +209,4 @@ def test_individual(test, mocker):
 
 def test_all():
   for test in complete_eval_set:
-    test_individual((), test)
+    test_individual(test)
